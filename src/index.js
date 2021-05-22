@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
 
 const defaultStyles = {
-  transformStyle: "preserve-3d"
+  transformStyle: "preserve-3d",
+  display: "inline-block"
 };
 
 function Hover({
+  style = {},
   children,
   easing = "cubic-bezier(.03,.98,.52,.99)",
   scale = 1,
@@ -121,7 +123,10 @@ function Hover({
   return (
     <div
       className="hover-3d"
-      style={tiltStyles}
+      style={{
+        ...style,
+        ...tiltStyles
+      }}
       ref={element}
       onMouseEnter={handleOnMouseEnter}
       onMouseMove={handleOnMouseMove}

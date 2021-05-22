@@ -39,17 +39,18 @@ export default App;
 
 Here is a list of available options with their defaults:
 
-```js
-style:                  {}      // A jsx style object that will be applied to the root element
-max:                    10      // Max tilt rotation (degrees)
-perspective:            1000    // Transform perspective, the lower the more extreme the tilt gets.
-scale:                  1       // 2 = 200%, 1.5 = 150%, etc..
-speed:                  400     // Speed of the enter/exit transition
-easing:                 "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit
-onMouseEnter:           (e) => {} // A callback function for the mouse enter event 
-onMouseMove:            (e) => {} // A callback function for the mouse move event 
-onMouseLeave:           (e) => {} // A callback function for the mouse leave event 
-```
+| Props | Default  | Description |
+| ------- | -----| ------------------- |
+| style | {}  | A jsx style object that will be applied to the root element | 
+| max | 10  | Max tilt rotation (degrees) |
+| perspective | 1000  | Transform perspective, the lower the more extreme the tilt gets | 
+| scale | 1  | multiply size on hover: 2 = 200%, 1.5 = 150%, etc.. | 
+| speed | 400  | Speed of the enter/exit transition | 
+| easing | cubic-bezier(.03,.98,.52,.99)  | Easing on enter/exit | 
+| onMouseEnter | (e) => {}  | A callback function for the mouse enter event  | 
+| onMouseMove | (e) => {}  | A callback function for the mouse move event  | 
+| onMouseLeave | (e) => {}  | A callback function for the mouse leave event  | 
+
 
 **Example:**
 

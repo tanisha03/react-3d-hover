@@ -25,9 +25,9 @@ function Hover(_ref) {
       _ref$scale = _ref.scale,
       scale = _ref$scale === undefined ? 1 : _ref$scale,
       _ref$speed = _ref.speed,
-      speed = _ref$speed === undefined ? 300 : _ref$speed,
+      speed = _ref$speed === undefined ? 400 : _ref$speed,
       _ref$perspective = _ref.perspective,
-      perspective = _ref$perspective === undefined ? 500 : _ref$perspective,
+      perspective = _ref$perspective === undefined ? 1000 : _ref$perspective,
       _ref$max = _ref.max,
       max = _ref$max === undefined ? 10 : _ref$max,
       _ref$onMouseEnter = _ref.onMouseEnter,
@@ -50,10 +50,10 @@ function Hover(_ref) {
   var updateCall = (0, _react.useRef)(null);
   var transitionTimeout = (0, _react.useRef)(null);
 
-  var handleOnMouseEnter = function handleOnMouseEnter(event) {
+  var handleOnMouseEnter = function handleOnMouseEnter() {
     updateElementPosition();
     setTransition();
-    return onMouseEnter(event);
+    return onMouseEnter();
   };
 
   var handleOnMouseMove = function handleOnMouseMove(event) {
@@ -64,7 +64,6 @@ function Hover(_ref) {
       return updateElementStyle(event);
     });
     return onMouseMove(event);
-    // updateElementStyle(event);
   };
 
   var handleOnMouseLeave = function handleOnMouseLeave(event) {

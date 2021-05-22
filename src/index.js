@@ -8,8 +8,8 @@ function Hover({
   children,
   easing = "cubic-bezier(.03,.98,.52,.99)",
   scale = 1,
-  speed = 300,
-  perspective = 500,
+  speed = 400,
+  perspective = 1000,
   max = 10,
   onMouseEnter = () => {},
   onMouseMove = () => {},
@@ -24,10 +24,10 @@ function Hover({
   const updateCall = useRef(null);
   const transitionTimeout = useRef(null);
 
-  const handleOnMouseEnter = (event) => {
+  const handleOnMouseEnter = () => {
     updateElementPosition();
     setTransition();
-    return onMouseEnter(event);
+    return onMouseEnter();
   };
 
   const handleOnMouseMove = (event) => {
@@ -36,7 +36,6 @@ function Hover({
     }
     updateCall.current = requestAnimationFrame(() => updateElementStyle(event));
     return onMouseMove(event);
-    // updateElementStyle(event);
   };
 
   const handleOnMouseLeave = (event) => {
